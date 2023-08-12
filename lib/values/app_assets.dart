@@ -6,5 +6,7 @@ class AppAssets{
 
   static String sbi = 'assets/images/sbi.png';
   static String icici = 'assets/images/icici.png';
+  static String avatar = 'assets/images/avatar.png';
   static String paymentDoneAudio = 'audio/payment.mp3';
+
 }

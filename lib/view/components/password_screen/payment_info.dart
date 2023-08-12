@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../values/app_values.dart';
 
 class PaymentInfo extends StatelessWidget {

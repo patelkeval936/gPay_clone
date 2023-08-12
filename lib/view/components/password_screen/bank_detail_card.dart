@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gpay_clone_for_curie/view/components/password_screen/payment_info.dart';
+import 'payment_info.dart';
 
 import '../../../model/bank_account.dart';
 import '../../../model/transaction.dart';
@@ -20,7 +20,7 @@ class BankDetailCard extends StatelessWidget {
       width: width,
       height: !showPaymentInfo ? 0 : 154,
       curve: Curves.linear,
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 200),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8),
         child: SingleChildScrollView(

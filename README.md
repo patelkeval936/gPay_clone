@@ -1,16 +1,11 @@
-# gpay_clone_for_curie
+# Google Pay clone made for curie.money
 
-A new Flutter project.
+## Project Details
 
-## Getting Started
+- [App Link - Google Drive](https://drive.google.com/file/d/1hc11ot8jok8xpDo0rHdoRXNmpET3vASf/view?usp=sharing)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## My Details
+Name : Keval Aamodra
+email : patelkeval936@gmail.com
+contact : 7567781104

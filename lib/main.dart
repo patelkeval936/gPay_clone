@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:gpay_clone_for_curie/values/app_strings.dart';
-import 'package:gpay_clone_for_curie/values/app_theme.dart';
-import 'package:gpay_clone_for_curie/values/app_values.dart';
-import 'package:gpay_clone_for_curie/view/screens/password_screen.dart';
-import 'package:gpay_clone_for_curie/view/screens/payment_completed_screen.dart';
-import 'package:gpay_clone_for_curie/view/screens/payment_screen.dart';
-
-import 'model/transaction.dart';
-import 'dart:math' as math;
+import 'package:flutter/services.dart';
+import 'router/app_router.dart';
+import 'values/app_strings.dart';
+import 'values/app_theme.dart';
+import 'view/screens/home_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
-
-Transaction transaction = Transaction(1.00, AppStrings.payeeName, AppStrings.payeeUpiId, DateTime.now(), math.Random().nextInt(9999999).toString());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,9 +20,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
       theme: AppTheme.theme,
-      // home:  PaymentCompletedScreen(transaction: transaction,),
-      home:  PasswordScreen(bankAccount: accounts[0], transaction: transaction,),
+      onGenerateRoute: (settings) {
+        return AppRouter.generateRoutes(settings);
+      },
+      home: const HomeScreen(),
     );
   }
 }
-

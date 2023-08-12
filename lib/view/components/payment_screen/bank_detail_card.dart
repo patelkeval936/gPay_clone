@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gpay_clone_for_curie/values/app_colors.dart';
 import '../../../values/app_strings.dart';
-import 'package:gpay_clone_for_curie/model/bank_account.dart';
+import '../../../model/bank_account.dart';
 
 class BankDetailCard extends StatelessWidget {
   final int cardIndex;
@@ -9,8 +8,13 @@ class BankDetailCard extends StatelessWidget {
   final bool chooseAccount;
   final BankAccount bankAccount;
 
-  const BankDetailCard({Key? key, required this.cardIndex, required this.selectedIndex, required this.bankAccount, required this.chooseAccount})
-      : super(key: key);
+  const BankDetailCard({
+    Key? key,
+    required this.cardIndex,
+    required this.selectedIndex,
+    required this.bankAccount,
+    required this.chooseAccount,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,9 +54,9 @@ class BankDetailCard extends StatelessWidget {
               ),
             ),
           ),
-          !chooseAccount ? Icon(Icons.keyboard_arrow_down_rounded) : Container(),
+          !chooseAccount ? const Icon(Icons.keyboard_arrow_down_rounded) : Container(),
           chooseAccount && selectedIndex == cardIndex
-              ? Icon(
+              ? const Icon(
                   Icons.check_circle_rounded,
                   color: Colors.blueAccent,
                 )

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '/values/app_colors.dart';
 import '../../../values/app_values.dart';
 import 'circle.dart';
 
@@ -19,7 +19,6 @@ class _PaymentDoneAnimationState extends State<PaymentDoneAnimation>
   late Animation<double> _innerScaleAnimation;
   late Animation<double> _fadeAnimation;
   late Animation<RelativeRect> _transitionAnimation;
-
 
   @override
   void initState() {
@@ -97,13 +96,13 @@ class _PaymentDoneAnimationState extends State<PaymentDoneAnimation>
               child: Center(
                 child: Circle(
                   radius: width / 2.5,
-                  color: Colors.blue.withOpacity(0.2),
+                  color: AppColors.buttonColor.withOpacity(0.2),
                   child: ScaleTransition(
                     scale: _innerScaleAnimation,
                     child: Center(
                       child: Circle(
                         radius: (width / 2.5) - 30,
-                        color: Colors.blue,
+                        color: AppColors.buttonColor,
                         child: FadeTransition(
                           opacity: _fadeAnimation,
                           child: const Icon(
